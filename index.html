@@ -78,14 +78,14 @@
 <textarea><script>
 jQuery(document).ready(function ($) {
 	// Переводчик яндекса
-	// Пока ограничение 10 000 обращений в сутеи или 1 000 000 символов.
+	// Пока ограничение 10 000 обращений в сутки или 1 000 000 символов.
 	$('input.tr-from').on('keyup', function () {
 		// Для возможности перевода из нескольких инпутов на странице заводим index 
 		var index = $('input.tr-from').index(this);
 		// API-ключ (получаем тут: http://api.yandex.ru/key/form.xml?service=trnsl)
-		var key = 'СЮДА_ВСТАВЛЯЕМ_API_КЛЮЧ';
-		// На какой язык переводим. Можно писать 'ru-en' для перевода с русского на инглиш.
-		var lang = 'en';
+		var key = 'trnsl.1.1.20130705T052930Z.27fcc82ff0c243be.c0e2f80d06217633cd117ad29131aff078a05530';
+		// С какого и на какой язык переводим. Можно писать 'ua-en' для перевода с украинского на инглиш.
+		var lang = 'ru-en';
 		// Что переводим.
 		var toTranslate = $(this).val();
 		// Сама функция перевода.
@@ -127,7 +127,7 @@ jQuery(document).ready(function ($) {
 	<script>
 		jQuery(document).ready(function ($) {
 			// Переводчик яндекса
-			// Пока ограничение 10 000 обращений в сутеи или 1 000 000 символов.
+			// Пока ограничение 10 000 обращений в сутки или 1 000 000 символов.
 			// Использование:
 			// <input class="tr-from">
 			// <input class="tr-to">
@@ -136,8 +136,8 @@ jQuery(document).ready(function ($) {
 				var index = $('input.tr-from').index(this);
 				// API-ключ (получаем тут: http://api.yandex.ru/key/form.xml?service=trnsl)
 				var key = 'trnsl.1.1.20130705T052930Z.27fcc82ff0c243be.c0e2f80d06217633cd117ad29131aff078a05530';
-				// На какой язык переводим. Можно писать 'ru-en' для перевода с русского на инглиш.
-				var lang = 'en';
+				// С какого и на какой язык переводим. Можно писать 'ua-en' для перевода с украинского на инглиш.
+				var lang = 'ru-en';
 				// Что переводим.
 				var toTranslate = $(this).val();
 				// Сама функция перевода.
